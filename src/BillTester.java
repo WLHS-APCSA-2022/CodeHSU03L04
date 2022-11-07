@@ -1,3 +1,6 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
 public class BillTester
 {
     public static void main(String[] args)
@@ -40,6 +43,37 @@ public class BillTester
         System.out.println("\nBirthday Dinner after tip");
         System.out.println();
 
+    }
+
+    @Test
+    public void testBill(){
+        Bill testBill = new Bill(125.45,10);
+        testBill.addTip();
+        assertEquals(156.81,testBill.getCost(),0.01);
+
+        testBill = new Bill(125.45,8);
+        testBill.addTip();
+        assertEquals(156.81,testBill.getCost(),0.01);
+
+        testBill = new Bill(125.45,7);
+        testBill.addTip();
+        assertEquals(150.54,testBill.getCost(),0.01);
+
+        testBill = new Bill(125.45,4);
+        testBill.addTip();
+        assertEquals(150.54,testBill.getCost(),0.01);
+
+        testBill = new Bill(125.45,3);
+        testBill.addTip();
+        assertEquals(131.72,testBill.getCost(),0.01);
+
+        testBill = new Bill(125.45,2);
+        testBill.addTip();
+        assertEquals(131.72,testBill.getCost(),0.01);
+
+        testBill = new Bill(125.45,1);
+        testBill.addTip();
+        assertEquals(125.45,testBill.getCost(),0.01);
 
     }
 }
