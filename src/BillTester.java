@@ -1,6 +1,6 @@
-//import static org.junit.Assert.*;
+import static org.junit.Assert.*;
 
-//import org.junit.Test;
+import org.junit.Test;
 public class BillTester
 {
     public static void main(String[] args)
@@ -47,7 +47,7 @@ public class BillTester
 
     }
 
-   /* @Test
+   @Test
     public void testBill(){
         Bill testBill = new Bill(125.45,10);
         testBill.addTip();
@@ -77,5 +77,5 @@ public class BillTester
         testBill.addTip();
         assertEquals(125.45,testBill.getCost(),0.01);
 
-    }*/
+    }
 }
